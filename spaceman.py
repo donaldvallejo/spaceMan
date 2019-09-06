@@ -12,15 +12,16 @@ def load_word():
     words_list = f.readlines()
     f.close()
 
-    words_list = words_list[0].split(' ')
+
     secret_word = random.choice(words_list)
     return secret_word
 
 def is_word_guessed(secret_word, letters_guessed):
-    index = 0
     for letters in secret_word:
-        
+        if letters not in letters_guessed:
+            return False
 
+    return True
     '''
     A function that checks if all the letters of the secret word have been guessed.
 
@@ -35,8 +36,14 @@ def is_word_guessed(secret_word, letters_guessed):
     pass
 
 def get_guessed_word(secret_word, letters_guessed):
-    
-
+    blanks = ''
+    for letters in secret_word:
+        if letters in letters_guessed:
+            blanks += letters 
+        else: 
+            blanks += '_'
+    print(blanks)
+        
     '''
     A function that is used to get a string showing the letters guessed so far in the secret word and underscores for letters that have not been guessed yet.
 
@@ -54,6 +61,8 @@ def get_guessed_word(secret_word, letters_guessed):
 
 
 def is_guess_in_word(guess, secret_word):
+    guess in secret_word
+    return
     '''
     A function to check if the guessed letter is in the secret word
 
@@ -80,7 +89,9 @@ def spaceman(secret_word):
       secret_word (string): the secret word to guess.
 
     '''
-
+    # add prompts
+    is_word_guessed()
+    get_guessed_word()
 
     #TODO: show the player information about the game according to the project spec
 
@@ -99,4 +110,4 @@ def spaceman(secret_word):
 
 #These function calls that will start the game
 secret_word = load_word()
-spaceman(load_word())
+spaceman(secret_word)
