@@ -10,6 +10,7 @@ def load_word():
     secret_word = random.choice(words_list)
     return secret_word
 
+
 def is_word_guessed(secret_word, letters_guessed):
     for letters in secret_word:
         if letters not in letters_guessed:
@@ -27,18 +28,20 @@ def get_guessed_word(secret_word, letters_guessed):
             blanks += '_'
     return blanks
 
-    
-
 
 def is_guess_in_word(guess, secret_word):
     return guess in secret_word
+
    
 def letter_guess():
     guess = ''
     while len(guess) == 0:
+        print(f'The secret word is {secret_word}')
         guess = input('Guess a letter: ')
+        
 
     return guess
+
 
 def check_used_letters(used_letters):
     letters = 'abcdefghijklmnopqrstuvwxyz'
@@ -47,6 +50,7 @@ def check_used_letters(used_letters):
         if letter not in used_letters:
             nonused_letters += letter
     print(f"These letters havn't been guessed yet {nonused_letters}") 
+
 
 def spaceman(secret_word):
     used_letters = []
