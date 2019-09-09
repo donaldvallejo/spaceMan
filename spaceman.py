@@ -46,7 +46,6 @@ def check_used_letters(used_letters):
     for letter in letters:
         if letter not in used_letters:
             nonused_letters += letter
-
     print(f"These letters havn't been guessed yet {nonused_letters}") 
 
 def spaceman(secret_word):
@@ -70,7 +69,7 @@ def spaceman(secret_word):
         else:
             guessesRemaining -= 1
             if guessesRemaining == 0:
-                print(f'You have 0 guesses remaining you lose. the word was {secret_word}!!!!')
+                print(f'You have 0 guesses remaining you lose. the word was {secret_word}')
                 return
             print('Sorry, your guess was not in the word, try again!')
             print(f'You have {guessesRemaining} incorrect guesses left')
@@ -80,5 +79,4 @@ def spaceman(secret_word):
 
 #These function calls that will start the game
 secret_word = load_word()
-print(secret_word)
 spaceman(secret_word)
