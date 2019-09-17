@@ -36,7 +36,6 @@ def is_guess_in_word(guess, secret_word):
 def letter_guess():
     guess = ''
     while len(guess) == 0:
-        print(f'The secret word is {secret_word}')
         guess = input('Guess a letter: ')
         
 
