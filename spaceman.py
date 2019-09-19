@@ -82,8 +82,6 @@ def spaceman(secret_word):
         check_used_letters(used_letters)
 
 """ PyTest Function """
-# def test_is_word_guessed():
-#     assert is_word_guessed('banana', 'ban') == True
 
 def test_is_guess_in_word(is_guess_in_word):
    assert is_guess_in_word(("home", "ho")) == True
