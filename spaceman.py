@@ -84,10 +84,10 @@ def spaceman(secret_word):
 """ PyTest Function """
 
 def test_is_guess_in_word(is_guess_in_word):
-   assert is_guess_in_word(("home", "ho")) == True
-#    assert is_guess_in_word((“b”, “a”, “s”, “e”), (“base”)) == True
-#    assert is_guess_in_word((“w”, “a”, “s”, “h”), (“wash”)) == True
-#    assert is_guess_in_word((“g”, “r”, “e”, “a”, “t”), (“great”)) == True
+#    assert is_guess_in_word(("home", "ho")) == True
+   assert is_guess_in_word(("b", "a", "s", "e"), ("base")) == True
+#    assert is_guess_in_word(("w", "a", "s", "h"), ("wash")) == True
+#    assert is_guess_in_word(("g", "r", "e", "a", "t"), ("great")) == True
 
 #These function calls that will start the game
 secret_word = load_word()
