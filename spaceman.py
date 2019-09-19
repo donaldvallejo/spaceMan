@@ -1,4 +1,5 @@
 import random
+import unittest
 
 def load_word():
     
@@ -80,11 +81,9 @@ def spaceman(secret_word):
             print(f'Guessed word so far {blanks}')
         check_used_letters(used_letters)
 
-""" PyTest Function """
-def test_function():
-    assert letter_guess() == 'f'
-    assert letter_guess() == 'r'
-    assert spaceman(secret_word) == 'h'
+# """ PyTest Function """
+# def test_function():
+#     assert is_word_guessed('banana', 'ban') == True
 
 #These function calls that will start the game
 secret_word = load_word()
