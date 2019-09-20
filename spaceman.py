@@ -80,14 +80,14 @@ def spaceman(secret_word):
             blanks = get_guessed_word(secret_word, correct_letters)
             print(f'Guessed word so far {blanks}')
         check_used_letters(used_letters)
+ 
+def main():
+    secret_word = load_word()
+    spaceman(secret_word)  
+
 
 """ PyTest Function """
-def test_is_guess_in_word(is_guess_in_word):
-   assert is_guess_in_word(("home", "ho")) == True
-   assert is_guess_in_word(("b", "a", "s", "e"), ("base")) == True
-   assert is_guess_in_word(("w", "a", "s", "h"), ("wash")) == True
-   assert is_guess_in_word(("g", "r", "e", "a", "t"), ("great")) == True
-
-#These function calls that will start the game
-secret_word = load_word()
-spaceman(secret_word)
+def test_is_guess_in_word():
+   assert is_guess_in_word("h", "home") == True
+   assert is_guess_in_word("t", "home") == False
+   assert is_guess_in_word("", "home") == True
